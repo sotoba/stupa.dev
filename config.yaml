@@ -31,10 +31,10 @@ params:
         lastUpdated: Jan 02, 2006 15:04 JST
 
     sidebar:
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: 溝さらい
         avatar:
             local: true
-            src: img/avatar.png
+            src: img/sotoba.jpg
 
     article:
         math: false
@@ -82,7 +82,7 @@ params:
         toggle: true
 
         # Available values: auto, light, dark
-        default: dark
+        default: light
 
     imageProcessing:
         cover:

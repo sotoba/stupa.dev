@@ -6,6 +6,65 @@
         <description>Recent content on stupa.dev</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja-jp</language>
-        <lastBuildDate>Sat, 16 Jan 2021 23:58:04 +0900</lastBuildDate><atom:link href="https://stupa.dev/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sun, 24 Jan 2021 22:47:02 +0900</lastBuildDate><atom:link href="https://stupa.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2021-01-24 Hugoで静的サイトを生成する</title>
+        <link>https://stupa.dev/p/2021-01-24-initilalize-website/</link>
+        <pubDate>Sun, 24 Jan 2021 22:47:02 +0900</pubDate>
+        
+        <guid>https://stupa.dev/p/2021-01-24-initilalize-website/</guid>
+        <description>&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ドメイン取得&lt;/li&gt;
+&lt;li&gt;hugoのセットアップ
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;https://gohugo.io/getting-started/quick-start/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;テーマの選択と設定
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.stack.jimmycai.com/getting-started&#34;&gt;https://docs.stack.jimmycai.com/getting-started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Netlifyへのデプロイ
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-netlify/&#34;&gt;https://gohugo.io/hosting-and-deployment/hosting-on-netlify/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DNS設定(Google Domains)
+&lt;ul&gt;
+&lt;li&gt;Aレコード設定&lt;/li&gt;
+&lt;li&gt;CNAMEレコード設定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;つまったところ&#34;&gt;つまったところ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;taxonomiesの概念がそもそもよくわかってなかった
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/&#34;&gt;https://gohugo.io/content-management/taxonomies/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;とりあえず既定のcaterogryとtagで最低限の分類はできそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Netlify DNSを使わずにGoogle Domainsにドメインの設定をする場合、Aレコードに設定する値がわからなかった
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain&#34;&gt;https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた&lt;/li&gt;
+&lt;li&gt;git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した
+&lt;ul&gt;
+&lt;li&gt;画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;次にやること&#34;&gt;次にやること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;フォントが簡体字系になっているので日本語フォントを適当に探す&lt;/li&gt;
+&lt;li&gt;ブランチ運用考える&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>

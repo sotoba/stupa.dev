@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' twitter: sotoba github: sotoba booth: stupa.devices  '><title>About</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='やったこと  ドメイン取得 hugoのセットアップ  https://gohugo.io/getting-started/quick-start/   テーマの選択と設定  https://docs.stack.jimmycai.com/getting-started   Netlifyへのデプロイ  https://gohugo.io/hosting-and-deployment/hosting-on-netlify/   DNS設定(Google Domains)  Aレコード設定 CNAMEレコード設定    つまったところ  taxonomiesの概念がそもそもよくわかってなかった  https://gohugo.io/content-management/taxonomies/ とりあえず既定のcaterogryとtagで最低限の分類はできそう   Netlify DNSを使わずにGoogle Domainsにドメインの設定をする場合、Aレコードに設定する値がわからなかった  https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)   AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した  画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない    次にやること  フォントが簡体字系になっているので日本語フォントを適当に探す ブランチ運用考える  '><title>2021-01-24 Hugoで静的サイトを生成する</title>
 
-<link rel='canonical' href='https://stupa.dev/about/'>
+<link rel='canonical' href='https://stupa.dev/p/2021-01-24-initilalize-website/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='About'>
-<meta property='og:description' content=' twitter: sotoba github: sotoba booth: stupa.devices  '>
-<meta property='og:url' content='https://stupa.dev/about/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='2021-01-24 Hugoで静的サイトを生成する'>
+<meta property='og:description' content='やったこと  ドメイン取得 hugoのセットアップ  https://gohugo.io/getting-started/quick-start/   テーマの選択と設定  https://docs.stack.jimmycai.com/getting-started   Netlifyへのデプロイ  https://gohugo.io/hosting-and-deployment/hosting-on-netlify/   DNS設定(Google Domains)  Aレコード設定 CNAMEレコード設定    つまったところ  taxonomiesの概念がそもそもよくわかってなかった  https://gohugo.io/content-management/taxonomies/ とりあえず既定のcaterogryとtagで最低限の分類はできそう   Netlify DNSを使わずにGoogle Domainsにドメインの設定をする場合、Aレコードに設定する値がわからなかった  https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)   AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した  画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない    次にやること  フォントが簡体字系になっているので日本語フォントを適当に探す ブランチ運用考える  '>
+<meta property='og:url' content='https://stupa.dev/p/2021-01-24-initilalize-website/'>
 <meta property='og:site_name' content='stupa.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2021-01-16T23:53:20&#43;09:00'/><meta property='article:modified_time' content='2021-01-16T23:53:20&#43;09:00'/>
-<meta name="twitter:site" content="sotoba"><meta name="twitter:title" content="About">
-<meta name="twitter:description" content=" twitter: sotoba github: sotoba booth: stupa.devices  ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2021-01-24T22:47:02&#43;09:00'/><meta property='article:modified_time' content='2021-01-24T22:47:02&#43;09:00'/>
+<meta name="twitter:site" content="sotoba"><meta name="twitter:title" content="2021-01-24 Hugoで静的サイトを生成する">
+<meta name="twitter:description" content="やったこと  ドメイン取得 hugoのセットアップ  https://gohugo.io/getting-started/quick-start/   テーマの選択と設定  https://docs.stack.jimmycai.com/getting-started   Netlifyへのデプロイ  https://gohugo.io/hosting-and-deployment/hosting-on-netlify/   DNS設定(Google Domains)  Aレコード設定 CNAMEレコード設定    つまったところ  taxonomiesの概念がそもそもよくわかってなかった  https://gohugo.io/content-management/taxonomies/ とりあえず既定のcaterogryとtagで最低限の分類はできそう   Netlify DNSを使わずにGoogle Domainsにドメインの設定をする場合、Aレコードに設定する値がわからなかった  https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)   AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した  画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない    次にやること  フォントが簡体字系になっているので日本語フォントを適当に探す ブランチ運用考える  ">
     </head>
-    <body class="article-page keep-sidebar">
+    <body class="">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -35,7 +35,7 @@
             document.body.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended ">
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
             <aside class="sidebar left-sidebar sticky">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
@@ -87,7 +87,7 @@
         
         
 
-        <li  class='current' >
+        <li >
             <a href='/about'>
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -166,14 +166,35 @@
 </aside>
 
             <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://stupa.dev" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
     <article class="main-article">
     <header class="article-header">
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                blog
+            </a>
+        
+    </header>
+    
 
     <h2 class="article-title">
-        <a href="/about/">About</a>
+        <a href="/p/2021-01-24-initilalize-website/">2021-01-24 Hugoで静的サイトを生成する</a>
     </h2>
 
     <footer class="article-time">
@@ -185,18 +206,61 @@
 
 
 
-        <time class="article-time--published">Jan 16, 2021</time>
+        <time class="article-time--published">Jan 24, 2021</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <ul>
-<li>twitter: <a class="link" href="https://twitter.com/sotoba"  target="_blank" rel="noopener"
-    >sotoba</a></li>
-<li>github: <a class="link" href="https://github.com/sotoba/"  target="_blank" rel="noopener"
-    >sotoba</a></li>
-<li>booth: <a class="link" href="https://stupa-devices.booth.pm/"  target="_blank" rel="noopener"
-    >stupa.devices</a></li>
+    <h2 id="やったこと">やったこと</h2>
+<ul>
+<li>ドメイン取得</li>
+<li>hugoのセットアップ
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+</ul>
+</li>
+<li>テーマの選択と設定
+<ul>
+<li><a href="https://docs.stack.jimmycai.com/getting-started">https://docs.stack.jimmycai.com/getting-started</a></li>
+</ul>
+</li>
+<li>Netlifyへのデプロイ
+<ul>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">https://gohugo.io/hosting-and-deployment/hosting-on-netlify/</a></li>
+</ul>
+</li>
+<li>DNS設定(Google Domains)
+<ul>
+<li>Aレコード設定</li>
+<li>CNAMEレコード設定</li>
+</ul>
+</li>
+</ul>
+<h2 id="つまったところ">つまったところ</h2>
+<ul>
+<li>taxonomiesの概念がそもそもよくわかってなかった
+<ul>
+<li><a href="https://gohugo.io/content-management/taxonomies/">https://gohugo.io/content-management/taxonomies/</a></li>
+<li>とりあえず既定のcaterogryとtagで最低限の分類はできそう</li>
+</ul>
+</li>
+<li>Netlify DNSを使わずにGoogle Domainsにドメインの設定をする場合、Aレコードに設定する値がわからなかった
+<ul>
+<li><a href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain">https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain</a></li>
+<li>Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)</li>
+</ul>
+</li>
+<li>AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた</li>
+<li>git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した
+<ul>
+<li>画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない</li>
+</ul>
+</li>
+</ul>
+<h2 id="次にやること">次にやること</h2>
+<ul>
+<li>フォントが簡体字系になっているので日本語フォントを適当に探す</li>
+<li>ブランチ運用考える</li>
 </ul>
 
 </section>
@@ -204,6 +268,12 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -222,7 +292,13 @@
     
 </article>
 
-     
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
         
     
 
@@ -240,8 +316,6 @@
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
-
-    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -310,7 +384,6 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-
             </main>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
