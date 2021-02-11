@@ -31,8 +31,9 @@ draft: false
   - https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain
   - Google DomainsはルートドメインへのALIASレコード設定ができないので、NetlifyロードバランサーのIPアドレスを決め打ちで設定する(いいのか?)
 - AWS Route53でDNSレコード管理しようかと思ったけどDNSSECの解除やらなんやらがダルすぎてやめた
-- git submodulesの使い方がわかってなくて、テーマのソースいじったらconflictが発生するのかと思って右往左往した
-  - 画像まわりやカスタムする箇所はそもそもテーマのソースコードと直接関係ないので差分もなにもない
+- アバター画像をどこに置いたらいいのかよくわからんかった
+  - https://github.com/CaiJimmy/hugo-theme-stack/issues/27
+  - ドキュメントをログインが必要なサービスに置くのやめてくれ
 
 ## 次にやること
 
